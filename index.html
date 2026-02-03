@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFT Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">✦</div>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-wrapper" id="navMenu">
+    <nav class="menu">
+      <a href="#home" class="active">Home</a>
+      <a href="#marketplace">Marketplace</a>
+      <a href="#artist">Artist</a>
+      <a href="#community">Community</a>
+    </nav>
+
+    <div class="auth">
+      <button class="btn-outline" id="loginBtn">Login</button>
+      <button class="btn-fill" id="signupBtn">Sign up</button>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="hero reveal">
+  <div class="hero-text">
+    <h1>
+      <em>Unlock</em>
+      <span>The Digital Renaissance</span>
+    </h1>
+    <p>
+      Discover, collect and sell extraordinary NFTs from top digital artists.
+    </p>
+    <a href="#marketplace" class="btn-cta">Start ▶</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/hero-hand.jpg" alt="NFT Hand Art" />
+  </div>
+</section>
+
+<section id="marketplace" class="section reveal">
+  <h2>Marketplace</h2>
+
+  <div class="filter-wrap">
+    <div class="filter">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="cheap">Cheap</button>
+      <button data-filter="premium">Premium</button>
+      <span class="filter-indicator"></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card" data-price="cheap">
+      <div class="card-image">
+        <img src="assets/bear.jpg" alt="Bear NFT">
+        <button class="like-btn">♥</button>
+      </div>
+      <h3>Bear</h3>
+      <span>$40</span>
+    </div>
+
+    <div class="card" data-price="premium">
+      <div class="card-image">
+        <img src="assets/lion.jpg" alt="Lion NFT">
+        <button class="like-btn">♥</button>
+      </div>
+      <h3>Lion</h3>
+      <span>$80</span>
+    </div>
+
+    <div class="card" data-price="premium">
+      <div class="card-image">
+        <img src="assets/cat.jpg" alt="Cat NFT">
+        <button class="like-btn">♥</button>
+      </div>
+      <h3>Cat</h3>
+      <span>$120</span>
+      <div class="countdown" id="countdown">Ending in: 02:45:10</div>
+    </div>
+  </div>
+</section>
+
+<section id="artist" class="section light reveal">
+  <h2>Artists</h2>
+
+  <div class="grid">
+    <div class="card artist-card" data-artist="andrew">
+      <img src="assets/andrew.jpeg" alt="Andrew Garf">
+      <span class="artist-link">Andrew Garfield</span>
+    </div>
+
+    <div class="card artist-card" data-artist="jen">
+      <img src="assets/jen.jpeg" alt="Jen Stark">
+      <span class="artist-link">Jen Stark</span>
+    </div>
+
+    <div class="card artist-card" data-artist="casey">
+      <img src="assets/casey.jpeg" alt="Casey Reas">
+      <span class="artist-link">Casey Reas</span>
+    </div>
+  </div>
+</section>
+
+<section id="community" class="section reveal">
+  <h2>Community</h2>
+  <p class="center-text">
+   Community is a space where artists and collectors come together to connect, share ideas, and grow together.
+   It helps people interact, collaborate, and stay inspired within the NFT world.
+  </p>
+</section>
+
+<div class="modal" id="loginModal">
+  <div class="modal-box">
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email" required />
+      <div class="password">
+        <input type="password" placeholder="Password" required />
+        <span class="toggle">👁</span>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p class="switch">
+      Don’t have an account?
+      <span data-open="signup">Sign up</span>
+    </p>
+    <button class="close">✕</button>
+  </div>
+</div>
+
+<div class="modal" id="signupModal">
+  <div class="modal-box">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <div class="password">
+        <input type="password" placeholder="Password" required />
+        <span class="toggle">👁</span>
+      </div>
+      <button type="submit">Create Account</button>
+    </form>
+    <p class="switch">
+      Already have an account?
+      <span data-open="login">Login</span>
+    </p>
+    <button class="close">✕</button>
+  </div>
+</div>
+
+<div class="modal" id="artistModal">
+  <div class="modal-box">
+    <h2 id="artistName"></h2>
+    <p id="artistBio"></p>
+    <a id="artistWiki" href="#" target="_blank">Read more on Wikipedia →</a>
+    <button class="close">✕</button>
+  </div>
+</div>
+
+<button id="topBtn">↑</button>
+
+<footer class="footer-creative">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>✦ NFTverse</h3>
+      <p>
+        Discover, collect and trade digital art from the
+        world’s most creative artists.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="#marketplace">Marketplace</a>
+      <a href="#artist">Artists</a>
+      <a href="#community">Community</a>
+      <a href="#home">Home</a>
+    </div>
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="#">Help Center</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Join Our Newsletter</h4>
+      <p>Get updates on new drops & artists.</p>
+      <div class="newsletter-box">
+        <input type="email" id="newsletterEmail" placeholder="Your email" />
+        <button type="button" id="subscribeBtn">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip">
+    <p>
+      NFT ✦ DIGITAL ART ✦ BLOCKCHAIN ✦ CREATORS ✦ FUTURE ✦ WEB3 ✦
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 NFTverse. All rights reserved.</span>
+    <span class="socials">
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">Discord</a>
+    </span>
+  </div>
+</footer>
+
+<div class="toast" id="successToast">
+  <span class="tick">✔</span>
+  <span>Subscribed successfully!</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
