@@ -3,7 +3,7 @@
 A fully responsive, high-performance landing page for a digital NFT marketplace. This project was built to demonstrate advanced CSS Grid layout techniques without relying on Flexbox or external frameworks.
 
 ## 🚀 Live Demo
-**https://harsh64041.github.io/NFT-Landing-Page/**
+**https://harsh64041.github.io/NFT-Landing-Page**
 
 ## 🛠️ Tech Stack
 * **HTML5** - Semantic markup.
